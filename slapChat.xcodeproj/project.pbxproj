@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8074CA201B3B609A00D2A841 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 8074CA1F1B3B609A00D2A841 /* Message.m */; };
 		D879F339195E028000FC5285 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D879F338195E028000FC5285 /* Foundation.framework */; };
 		D879F33B195E028000FC5285 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D879F33A195E028000FC5285 /* CoreGraphics.framework */; };
 		D879F33D195E028000FC5285 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D879F33C195E028000FC5285 /* UIKit.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8074CA1E1B3B609A00D2A841 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		8074CA1F1B3B609A00D2A841 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		D879F335195E028000FC5285 /* slapChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = slapChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D879F338195E028000FC5285 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D879F33A195E028000FC5285 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -121,6 +124,8 @@
 		D879F33E195E028000FC5285 /* slapChat */ = {
 			isa = PBXGroup;
 			children = (
+				8074CA1E1B3B609A00D2A841 /* Message.h */,
+				8074CA1F1B3B609A00D2A841 /* Message.m */,
 				D879F373195E02C000FC5285 /* slapChat.xcdatamodeld */,
 				D879F370195E02B400FC5285 /* FISDataStore.h */,
 				D879F371195E02B400FC5285 /* FISDataStore.m */,
@@ -263,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D879F345195E028000FC5285 /* main.m in Sources */,
+				8074CA201B3B609A00D2A841 /* Message.m in Sources */,
 				D879F375195E02C000FC5285 /* slapChat.xcdatamodeld in Sources */,
 				D879F372195E02B400FC5285 /* FISDataStore.m in Sources */,
 				D879F349195E028000FC5285 /* FISAppDelegate.m in Sources */,
@@ -471,6 +477,7 @@
 				D879F369195E028000FC5285 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D879F36A195E028000FC5285 /* Build configuration list for PBXNativeTarget "slapChatTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +486,7 @@
 				D879F36C195E028000FC5285 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

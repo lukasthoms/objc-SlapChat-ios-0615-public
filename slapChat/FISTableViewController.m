@@ -27,6 +27,19 @@
 {
     [super viewDidLoad];
     
+    FISDataStore *dataStore = [FISDataStore sharedDataStore];
+    Message *message3 = [NSEntityDescription insertNewObjectForEntityForName:@"Message"
+                                                      inManagedObjectContext:dataStore.managedObjectContext];
+    message3.content = @"How you doing?";
+    message3.createdAt = [NSDate date];
+    Message *message4 = [NSEntityDescription insertNewObjectForEntityForName:@"Message"
+                                                      inManagedObjectContext:dataStore.managedObjectContext];
+    message4.content = @"I'm ok I guess";
+    message4.createdAt = [NSDate date];
+    [dataStore saveContext];
+    NSFetchRequest *messageFetch = [[NSFetchRequest alloc] initWithEntityName:@"Message"];
+    self.messages = [dataStore.managedObjectContext executeFetchRequest:messageFetch error:nil];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -44,28 +57,29 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
-    return 0;
+    return self.messages.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"basicCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    cell.textLabel.text = [self.messages[indexPath.row] content];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [self.messages[indexPath.row] createdAt] ];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
